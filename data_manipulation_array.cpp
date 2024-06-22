@@ -1,7 +1,7 @@
 #include<iomanip>
 #include<iostream>
 using namespace std;
-void input(int A[5][6],int n){
+void input(int A[5][6],int n){   // Number of students and their marks in 5 subjects
     for(int i=0;i<n;i++){
         cout<<i+1<<'\t';
         for(int j=0;j<5;j++){
@@ -21,7 +21,7 @@ void Result_summary(int A[5][6],int n){
         A[i][5]=sum/5; //assigned to "percentage col"
     }
 }
-int topper(int A[5][6],int n){
+int topper(int A[5][6],int n){     // Highest percentage scored 
     int lgt=A[0][5];
     for(int i=0;i<n;i++){
         if(A[i][5]>lgt){
@@ -30,7 +30,7 @@ int topper(int A[5][6],int n){
     }
     return lgt;
 }
-void avg_marks(int A[5][6],int n){
+void avg_marks(int A[5][6],int n){   // Average marks in each subject
     int avg;
     
     for(int j=0;j<6;j++){
@@ -43,10 +43,9 @@ void avg_marks(int A[5][6],int n){
         cout<<'\t'<<avg;
     }  
 }
-void display(int A[5][6],int n){
+void display(int A[5][6],int n){    // Display of the database created
     cout<<"YOUR DATA BASE:"<<endl;
     cout<<"RN."<<'\t'<<"Eng"<<'\t'<<"CS"<<'\t'<<"Maths"<<'\t'<<"Phy"<<'\t'<<"Chem"<<'\t'<<"Percentage"<<endl;
-    // cout<<setw(10)<<"Roll No."<<setw(10)<<"eng"<<setw(10)<<"CS"<<setw(10)<<"Maths"<<setw(10)<<"Phy"<<setw(10)<<"Chem"<<setw(10)<<"Percentage"<<endl; // using setw to right justify
     for(int i=0;i<n;i++){
         cout<<i+1<<'\t';
         for(int j=0;j<6;j++)
